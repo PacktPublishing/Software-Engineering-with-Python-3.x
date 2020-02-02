@@ -1,0 +1,12 @@
+Name,John
+Age,25
+Email,john123@xyz.com
+Name,Melissa
+Age,32
+Email,mellisa456@abc.com
+Name,Jack
+Age,19
+Email,jkc123@rst.com
+Name,Miley
+Age,22
+Email,Mi.ley@xyz.com
