@@ -1,0 +1,2 @@
+Hello! I am a string! I am test string!
+This is another string. I am not the same as first string!!
