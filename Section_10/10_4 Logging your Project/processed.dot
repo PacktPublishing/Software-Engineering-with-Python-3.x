@@ -1,0 +1,18 @@
+strict digraph  {
+Pamela;
+Cole;
+Darry;
+Carry;
+John;
+Michael;
+May;
+Jim;
+Pamela -> Cole  [label=6];
+Pamela -> May  [label=10];
+Darry -> Carry  [label=9];
+John -> Pamela  [label=14];
+John -> May  [label=14];
+Michael -> May  [label=2];
+Michael -> Jim  [label=13];
+May -> John  [label=14];
+}

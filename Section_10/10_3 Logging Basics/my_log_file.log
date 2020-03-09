@@ -1,0 +1,7 @@
+2020-02-19 19:23:38,559: INFO:::I am an INFO level statement
+2020-02-19 19:23:39,560: WARNING:::I am a WARNING level statement
+2020-02-19 19:23:40,561: ERROR:::I am an ERROR level statement
+2020-02-19 19:23:41,562: CRITICAL:::I am a CRITICAL level statement
+2020-02-19 19:23:41,563: INFO:::The value of var X is 10
+2020-02-19 19:23:41,563: INFO:::The value of var Y is 20
+2020-02-19 19:23:41,563: INFO:::Their sum is 30

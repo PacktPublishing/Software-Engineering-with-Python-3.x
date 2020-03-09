@@ -1,0 +1,253 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>my_package package &#8212; my_package 2020 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="my-package-package">
+<h1>my_package package<a class="headerlink" href="#my-package-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-my_package.data_dict">
+<span id="my-package-data-dict-module"></span><h2>my_package.data_dict module<a class="headerlink" href="#module-my_package.data_dict" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="my_package.data_dict.DataDict">
+<em class="property">class </em><code class="descclassname">my_package.data_dict.</code><code class="descname">DataDict</code><span class="sig-paren">(</span><em>mail_dicts</em>, <em>max_rep=10</em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.data_dict.DataDict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class takes a list of emails &amp; duplicates them 
+and then writes the duplicated data to a csv file.</p>
+<p>duplicate_data : duplicates the list of emails randomly</p>
+<p>write_dup_data : writes the duplicated data to a csv file</p>
+<p>mail_dicts : list of email dicts</p>
+<dl class="docutils">
+<dt>max_rep <span class="classifier-delimiter">:</span> <span class="classifier">max no. of times an email is to </span></dt>
+<dd>duplicated(default: 10)</dd>
+</dl>
+<dl class="method">
+<dt id="my_package.data_dict.DataDict.duplicate_data">
+<code class="descname">duplicate_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_package.data_dict.DataDict.duplicate_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Duplicates the list of emails.</p>
+<p>This function randomly duplicates each entry in the list of
+emails. Then adds them to duplicated_dict_list, followed by
+shuffling it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="my_package.data_dict.DataDict.write_dup_data">
+<code class="descname">write_dup_data</code><span class="sig-paren">(</span><em>file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.data_dict.DataDict.write_dup_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function writes the duplicated data to a csv file.</p>
+<p>file_name: csv file name where the duplicated data is to be saved.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-my_package.get_relations">
+<span id="my-package-get-relations-module"></span><h2>my_package.get_relations module<a class="headerlink" href="#module-my_package.get_relations" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="my_package.get_relations.EmailRelations">
+<em class="property">class </em><code class="descclassname">my_package.get_relations.</code><code class="descname">EmailRelations</code><span class="sig-paren">(</span><em>data_dicts</em>, <em>max_rep</em>, <em>csv_fname</em>, <em>dot_fname</em>, <em>png_fname</em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.get_relations.EmailRelations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Creates a png file describing relations based on emails list.</p>
+<dl class="docutils">
+<dt>create_relations_image <span class="classifier-delimiter">:</span> <span class="classifier">Creates a png file describing</span></dt>
+<dd>relations based on emails list.</dd>
+</dl>
+<p>data_dicts : list of email dicts</p>
+<dl class="docutils">
+<dt>max_rep <span class="classifier-delimiter">:</span> <span class="classifier">max no. of times an email is to </span></dt>
+<dd>duplicated.</dd>
+</dl>
+<p>csv_fname : name of csv file where data is stored.</p>
+<p>dot_fname : name of dot where intermediate graph is stored.</p>
+<p>png_fname : name of png file with the final graph.</p>
+<dl class="method">
+<dt id="my_package.get_relations.EmailRelations.create_relations_image">
+<code class="descname">create_relations_image</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_package.get_relations.EmailRelations.create_relations_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a png file describing relations based on emails list.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-my_package.make_graph">
+<span id="my-package-make-graph-module"></span><h2>my_package.make_graph module<a class="headerlink" href="#module-my_package.make_graph" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="my_package.make_graph.MakeGraphFile">
+<em class="property">class </em><code class="descclassname">my_package.make_graph.</code><code class="descname">MakeGraphFile</code><span class="sig-paren">(</span><em>dot_file</em>, <em>png_file</em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.make_graph.MakeGraphFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is used to create a graph out of the list of
+emails.</p>
+<p>This class reads the duplicated list of emails, then creates a
+Directed Graph out of it, using NetworkX library. Finally, it 
+creates a .png file for the graph.</p>
+<dl class="docutils">
+<dt>make_nx_graph <span class="classifier-delimiter">:</span> <span class="classifier">creates a NetworkX graph based on the list</span></dt>
+<dd>of emails</dd>
+</dl>
+<p>write_dot_file : writes the Directed Graph to a dot file</p>
+<p>write_png_file : creates a .png file from the dot file</p>
+<p>mail_dicts : list of email dicts</p>
+<dl class="docutils">
+<dt>max_rep <span class="classifier-delimiter">:</span> <span class="classifier">max no. of times an email is to </span></dt>
+<dd>duplicated(default: 10)</dd>
+</dl>
+<dl class="method">
+<dt id="my_package.make_graph.MakeGraphFile.make_nx_graph">
+<code class="descname">make_nx_graph</code><span class="sig-paren">(</span><em>mails_data</em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.make_graph.MakeGraphFile.make_nx_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Directed Graph based on email data.</p>
+<p>This function takes the duplicated emails list, then
+creates a Directed Graph out of them using NetworkX library.
+The weight of each edge is the number of times the value is
+duplicated.</p>
+<p>mails_data : list of email dicts</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="my_package.make_graph.MakeGraphFile.write_dot_file">
+<code class="descname">write_dot_file</code><span class="sig-paren">(</span><em>mails_data</em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.make_graph.MakeGraphFile.write_dot_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Graph from the list of emails, then writes the
+NetworkX graph to a dot file.</p>
+<p>mails_data: list of email dicts</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="my_package.make_graph.MakeGraphFile.write_png_file">
+<code class="descname">write_png_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_package.make_graph.MakeGraphFile.write_png_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a .png file from the dot file saved previously.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-my_package.process_data">
+<span id="my-package-process-data-module"></span><h2>my_package.process_data module<a class="headerlink" href="#module-my_package.process_data" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="my_package.process_data.ProcessData">
+<em class="property">class </em><code class="descclassname">my_package.process_data.</code><code class="descname">ProcessData</code><span class="sig-paren">(</span><em>file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#my_package.process_data.ProcessData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class processes the duplicated data.</p>
+<p>read_data : read the duplicated data from csv file</p>
+<p>process_data : process the duplicated data from csv file</p>
+<p>file_name : name of csv file where emails are stored</p>
+<dl class="method">
+<dt id="my_package.process_data.ProcessData.process_data">
+<code class="descname">process_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_package.process_data.ProcessData.process_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the csv file for emails and get counts of emails.</p>
+<p>This function reads the duplicated data from a csv file.
+Then using Counter from collections modules, it gets the 
+count of each unique entry.</p>
+<dl class="docutils">
+<dt>mail_count <span class="classifier-delimiter">:</span> <span class="classifier">A dictionary with key as email entry and the </span></dt>
+<dd>value as it’s frequency.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="my_package.process_data.ProcessData.read_data">
+<code class="descname">read_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_package.process_data.ProcessData.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the csv file into a list of emails.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-my_package">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-my_package" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">my_package</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, someone.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/my_package.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

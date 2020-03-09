@@ -1,0 +1,8 @@
+decorator==4.4.1
+networkx==2.4
+numpy==1.18.1
+pydot==1.4.1
+pyparsing==2.4.6
+python-dateutil==2.8.1
+pytz==2019.3
+six==1.14.0

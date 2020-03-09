@@ -1,0 +1,8 @@
+2020-02-21 13:08:12,968:get_relations.py_INFO:::Initialized the EmailRelations instance.
+2020-02-21 13:08:12,968:data_dict.py_INFO:::Data Dict initialized.
+2020-02-21 13:08:12,969:get_relations.py_INFO:::Data Duplicated successfully.
+2020-02-21 13:08:12,969:process_data.py_INFO:::Count of unique emails is Counter({('John', 'Pamela'): 14, ('May', 'John'): 14, ('John', 'May'): 14, ('Michael', 'Jim'): 13, ('Pamela', 'May'): 10, ('Darry', 'Carry'): 9, ('Pamela', 'Cole'): 6, ('Michael', 'May'): 2}).
+2020-02-21 13:08:12,969:get_relations.py_INFO:::Data Processed successfully.
+2020-02-21 13:08:12,969:make_graph.py_INFO:::Initialized MakeGraph instance.
+2020-02-21 13:08:12,969:make_graph.py_INFO:::Directed Graph Generated Successfully.
+2020-02-21 13:08:13,046:get_relations.py_INFO:::Graph file Generated.
